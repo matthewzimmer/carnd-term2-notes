@@ -3,8 +3,13 @@
 //
 
 #include "hello_world.h"
+#include "Car.h"
 
 int main() {
     cout << "Hello, World!" << endl;
+
+    Car car;
+    car.beep();
+
     return 0;
 }

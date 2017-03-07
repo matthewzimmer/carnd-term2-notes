@@ -1,0 +1,4 @@
+/Users/matthewz/git/udacity/carnd/carnd-term2-notes/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/matthewz/git/udacity/carnd/carnd-term2-notes/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/matthewz/git/udacity/carnd/carnd-term2-notes/cmake-build-debug/CMakeFiles/KalmanFilter.dir
+/Users/matthewz/git/udacity/carnd/carnd-term2-notes/cmake-build-debug/CMakeFiles/term2_notes.dir
