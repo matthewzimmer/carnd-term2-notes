@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="term2_notes"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/matthewz/git/udacity/carnd/carnd-term2-notes"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/matthewz/git/udacity/carnd/carnd-term2-notes"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/matthewz/git/udacity/carnd/carnd-term2-notes"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="11_Laser_Measurements_Part_3">
+				<Option output="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/11_Laser_Measurements_Part_3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/matthewz/git/udacity/carnd/carnd-term2-notes"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 11_Laser_Measurements_Part_3"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="11_Laser_Measurements_Part_3/fast">
+				<Option output="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/11_Laser_Measurements_Part_3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/matthewz/git/udacity/carnd/carnd-term2-notes"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 11_Laser_Measurements_Part_3/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="KalmanFilter">
+				<Option output="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/KalmanFilter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/matthewz/git/udacity/carnd/carnd-term2-notes"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 KalmanFilter"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="KalmanFilter/fast">
+				<Option output="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/KalmanFilter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/matthewz/git/udacity/carnd/carnd-term2-notes"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 KalmanFilter/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="term2_notes">
+				<Option output="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/term2_notes" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/matthewz/git/udacity/carnd/carnd-term2-notes"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 term2_notes"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="term2_notes/fast">
+				<Option output="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/term2_notes" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/matthewz/git/udacity/carnd/carnd-term2-notes"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 term2_notes/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewz/git/udacity/carnd/carnd-term2-notes/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/ground_truth_package.h">
+			<Option target="11_Laser_Measurements_Part_3"/>
+		</Unit>
+		<Unit filename="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/kalman_filter.cpp">
+			<Option target="11_Laser_Measurements_Part_3"/>
+		</Unit>
+		<Unit filename="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/kalman_filter.h">
+			<Option target="11_Laser_Measurements_Part_3"/>
+		</Unit>
+		<Unit filename="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/main.cpp">
+			<Option target="11_Laser_Measurements_Part_3"/>
+		</Unit>
+		<Unit filename="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/main.h">
+			<Option target="11_Laser_Measurements_Part_3"/>
+		</Unit>
+		<Unit filename="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/measurement_package.h">
+			<Option target="11_Laser_Measurements_Part_3"/>
+		</Unit>
+		<Unit filename="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/tracking.cpp">
+			<Option target="11_Laser_Measurements_Part_3"/>
+		</Unit>
+		<Unit filename="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/tracking.h">
+			<Option target="11_Laser_Measurements_Part_3"/>
+		</Unit>
+		<Unit filename="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/L5_Lidar_and_Radar_with_Kalman_Filters/5_Kalman_Filter_Equations_in_C++_Part1/KalmanFilter.cpp">
+			<Option target="KalmanFilter"/>
+		</Unit>
+		<Unit filename="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/L5_Lidar_and_Radar_with_Kalman_Filters/5_Kalman_Filter_Equations_in_C++_Part1/KalmanFilter.h">
+			<Option target="KalmanFilter"/>
+		</Unit>
+		<Unit filename="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/scratchpad/Car.cpp">
+			<Option target="term2_notes"/>
+		</Unit>
+		<Unit filename="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/scratchpad/Car.h">
+			<Option target="term2_notes"/>
+		</Unit>
+		<Unit filename="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/scratchpad/hello_world.cpp">
+			<Option target="term2_notes"/>
+		</Unit>
+		<Unit filename="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/scratchpad/hello_world.h">
+			<Option target="term2_notes"/>
+		</Unit>
+		<Unit filename="/Users/matthewz/git/udacity/carnd/carnd-term2-notes/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

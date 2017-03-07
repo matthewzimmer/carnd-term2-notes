@@ -7,16 +7,6 @@
 // Write a function 'filter()' that implements a multi-
 // dimensional Kalman Filter for the example given
 //============================================================================
-#include <iostream>
-#include "Eigen/Dense"
-#include <vector>
-
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "IncompatibleTypes"
-using namespace std;
-using namespace Eigen;
-using Eigen::VectorXd;
-using Eigen::MatrixXd;
 
 //Kalman Filter variables
 VectorXd x;  // object state
@@ -33,6 +23,8 @@ vector<VectorXd> measurements;
 void filter(VectorXd &x, MatrixXd &P);
 
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "IncompatibleTypes"
 int main() {
   /**
    * Code used as example to work with Eigen matrices
@@ -119,6 +111,7 @@ int main() {
   return 0;
 
 }
+#pragma clang diagnostic pop
 
 
 void filter(VectorXd &x, MatrixXd &P) {

@@ -11,3 +11,16 @@ set(kalman_sources
         L5_Lidar_and_Radar_with_Kalman_Filters/5_Kalman_Filter_Equations_in_C++_Part1/KalmanFilter.h)
 
 add_executable(KalmanFilter ${kalman_sources})
+
+
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/obj_pose-laser-radar-synthetic-input.txt
+        DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+add_executable(11_Laser_Measurements_Part_3
+        L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/main.cpp
+        L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/main.h
+        L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/ground_truth_package.h
+        L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/measurement_package.h
+        L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/tracking.h
+        L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/tracking.cpp
+        L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/kalman_filter.h
+        L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/kalman_filter.cpp)
