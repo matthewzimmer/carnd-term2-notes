@@ -89,10 +89,6 @@ void Tracking::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
           0, ((pow(dt, 4.0)) / 4.0) * noise_ay, 0, ((pow(dt, 3.0)) / 2.0) * noise_ay,
           ((pow(dt, 3.0)) / 2.0) * noise_ax, 0, pow(dt, 2.0) * noise_ax, 0,
           0, ((pow(dt, 3.0)) / 2.0) * noise_ay, 0, pow(dt, 2.0) * noise_ay;
-//  kf_.Q_ << ((pow(dt, 4.0)) / 4.0) * noise_ax, 0, ((pow(dt, 3.0)) / 2.0) * noise_ax, 0,
-//          0, ((pow(dt, 2.0)) / 4.0) * noise_ay, 0, ((pow(dt, 3.0)) / 2.0) * noise_ay,
-//          ((pow(dt, 3.0)) / 2.0) * noise_ax, 0, pow(dt, 2.0) * noise_ax, 0,
-//          0, ((pow(dt, 3.0)) / 2.0) * noise_ay, 0, pow(dt, 2.0) * noise_ay;
 
   //3. Call the Kalman Filter predict() function
   kf_.Predict();
