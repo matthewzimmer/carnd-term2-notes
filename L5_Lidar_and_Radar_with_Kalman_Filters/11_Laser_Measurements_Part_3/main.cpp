@@ -6,7 +6,7 @@
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "IncompatibleTypes"
-int main() {
+int main(int argc, char* argv[]) {
 
   /*******************************************************************************
    *  Set Measurements															 *
