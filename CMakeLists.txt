@@ -28,3 +28,5 @@ add_executable(11_Laser_Measurements_Part_3
 add_executable(16_Jacobian_Matrix_Part_1
         L5_Lidar_and_Radar_with_Kalman_Filters/16_Jacobian_Matrix_Part_1/main.cpp
         L5_Lidar_and_Radar_with_Kalman_Filters/16_Jacobian_Matrix_Part_1/main.h)
+
+add_executable(20_Evalating_KF_Performance_Part_1 L5_Lidar_and_Radar_with_Kalman_Filters/20_Evalating_KF_Performance_Part_1/main.cpp L5_Lidar_and_Radar_with_Kalman_Filters/20_Evalating_KF_Performance_Part_1/main.h)
