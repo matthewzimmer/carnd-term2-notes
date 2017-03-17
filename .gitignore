@@ -29,3 +29,5 @@
 *.app
 *.iml
 .idea
+
+cmake-build-debug
