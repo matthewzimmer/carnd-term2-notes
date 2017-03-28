@@ -28,7 +28,7 @@ void UKF::GenerateSigmaPoints(MatrixXd* Xsig_out) {
 
   //define spreading parameter
   double lambda = 3 - n_x;
-  double alpha = sqrt(lambda + n_x);
+  double sqr_lambda = sqrt(lambda+n_x);
 
   //set example state
   VectorXd x = VectorXd(n_x);
@@ -50,11 +50,11 @@ void UKF::GenerateSigmaPoints(MatrixXd* Xsig_out) {
           -0.0020,    0.0060,    0.0008,    0.0100,    0.0123;
 
   //create sigma point matrix
-  MatrixXd Xsig = MatrixXd(n_x, 1 + 2 * n_x);
+  int sigma_points = 2 * n_x;
+  MatrixXd Xsig = MatrixXd(n_x, 1 + sigma_points);
 
   //calculate square root of P
   MatrixXd A = P.llt().matrixL();
-  std::cout << std::endl << "A= " << std::endl << A << std::endl;
 
 /*******************************************************************************
  * Student part begin
@@ -63,31 +63,30 @@ void UKF::GenerateSigmaPoints(MatrixXd* Xsig_out) {
   //calculate sigma points ...
   //set sigma points as columns of matrix Xsig
 
-  MatrixXd B = alpha * A;
-  std::cout << std::endl << "alpha * A= " << std::endl << B << std::endl;
-
   // mean state sigma point (xk|k read "x sub k pipe k")
-  Xsig(0, 0) = x(0);
-  Xsig(1, 0) = x(1);
-  Xsig(2, 0) = x(2);
-  Xsig(3, 0) = x(3);
-  Xsig(4, 0) = x(4);
+  Xsig.col(0) = x;
 
   // next sigma points are "x + sqrt((lambda + n_x) * Pk|k)"
-  MatrixXd next_sigma_points = B.colwise()+x; // through broadcasting
+  MatrixXd B = sqr_lambda * A;
+  for(int i = 1; i <= n_x; i++) {
+    Xsig.col(i) = x + B.col(i-1);
+    Xsig.col(i+n_x) = x - B.col(i-1);
+  }
 
-  Xsig.col(1) = next_sigma_points.col(0);
-  Xsig.col(2) = next_sigma_points.col(1);
-  Xsig.col(3) = next_sigma_points.col(2);
-  Xsig.col(4) = next_sigma_points.col(3);
-  Xsig.col(5) = next_sigma_points.col(4);
+  // using Eigen's broadcasting mechanic (the really long way)
+//  MatrixXd next_sigma_points = B.colwise()+x;
+//  Xsig.col(1) = next_sigma_points.col(0);
+//  Xsig.col(2) = next_sigma_points.col(1);
+//  Xsig.col(3) = next_sigma_points.col(2);
+//  Xsig.col(4) = next_sigma_points.col(3);
+//  Xsig.col(5) = next_sigma_points.col(4);
 
-  next_sigma_points = -1*(B.colwise()-x);
-  Xsig.col(6) = next_sigma_points.col(0);
-  Xsig.col(7) = next_sigma_points.col(1);
-  Xsig.col(8) = next_sigma_points.col(2);
-  Xsig.col(9) = next_sigma_points.col(3);
-  Xsig.col(10) = next_sigma_points.col(4);
+//  next_sigma_points = -1*(B.colwise()-x);
+//  Xsig.col(6) = next_sigma_points.col(0);
+//  Xsig.col(7) = next_sigma_points.col(1);
+//  Xsig.col(8) = next_sigma_points.col(2);
+//  Xsig.col(9) = next_sigma_points.col(3);
+//  Xsig.col(10) = next_sigma_points.col(4);
 
 /*******************************************************************************
  * Student part end
