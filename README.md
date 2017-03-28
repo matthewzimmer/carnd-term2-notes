@@ -6,6 +6,12 @@
  
 https://help.github.com/articles/syncing-a-fork/
 
+Specify a new remote upstream repository that will be synced with the fork.
+
+```bash
+$ git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+```
+
 1. Fetch the branches and their respective commits from the upstream repository. Commits to master will be stored in a local branch, upstream/master.
 ```bash
 $ git fetch upstream
