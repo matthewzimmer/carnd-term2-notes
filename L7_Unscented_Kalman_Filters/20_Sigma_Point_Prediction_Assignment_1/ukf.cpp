@@ -56,46 +56,44 @@ void UKF::SigmaPointPrediction(MatrixXd *Xsig_out) {
   //predict sigma points
   //avoid division by zero
   //write predicted sigma points into right column
-//  size_t N = n_aug;
-//  for(int i = 0; i < N; i++) {
-//
-//  }
-  VectorXd x = Xsig_aug.col(0);
-//  double px = x(0);
-//  double py = x(1);
-  double v = x(2);
-  double yaw = x(3);
-  double yaw_dot = x(4);
-  double v_a = x(5);
-  double v_yawdd = x(6);
+  VectorXd x;
 
-  VectorXd a = VectorXd(5);
-  a.fill(0.0);
-  if (yaw_dot == 0.0) {
-    a << v * cos(yaw) * delta_t,
-            v * sin(yaw) * delta_t,
-            0,
-            yaw_dot * delta_t,
-            0;
-  } else {
-    a << (v/yaw_dot) * (sin(yaw+yaw_dot*delta_t) - sin(yaw)),
-            (v/yaw_dot) * (-cos(yaw+yaw_dot*delta_t) + cos(yaw)),
-            0,
-            yaw_dot * delta_t,
-            0;
+  size_t N = 2 * n_aug + 1;
+  for (int i = 0; i < N; i++) {
+    x = Xsig_aug.col(i);
+
+    //  double px = x(0);
+    //  double py = x(1);
+    double v = x(2);
+    double yaw = x(3);
+    double yaw_dot = x(4);
+    double v_a = x(5);
+    double v_yawdd = x(6);
+
+    VectorXd a = VectorXd(5);
+    if (yaw_dot == 0.0) {
+      a << v * cos(yaw) * delta_t,
+              v * sin(yaw) * delta_t,
+              0.0,
+              yaw_dot * delta_t,
+              0.0;
+    } else {
+      a << (v / yaw_dot) * (sin(yaw + yaw_dot * delta_t) - sin(yaw)),
+              (v / yaw_dot) * (-cos(yaw + yaw_dot * delta_t) + cos(yaw)),
+              0.0,
+              yaw_dot * delta_t,
+              0.0;
+    }
+
+    VectorXd b = VectorXd(5);
+    b << 0.5 * (delta_t * delta_t) * cos(yaw) * v_a,
+            0.5 * (delta_t * delta_t) * sin(yaw) * v_a,
+            delta_t * v_a,
+            0.5 * (delta_t * delta_t) * v * v_yawdd,
+            delta_t * v * v_yawdd;
+
+    Xsig_pred.col(i) = x.segment(0, n_x) + a + b;
   }
-
-  MatrixXd a_m = a.replicate(1,2*n_aug+1);
-
-  VectorXd b = VectorXd(5);
-  b << 0.5 * (delta_t * delta_t) * cos(yaw) * v_a,
-          0.5 * (delta_t * delta_t) * sin(yaw) * v_a,
-          delta_t * v_a,
-          0.5 * (delta_t * delta_t) * v * v_yawdd,
-          delta_t * v * v_yawdd;
-  MatrixXd b_m = b.replicate(1,2*n_aug+1);
-
-  Xsig_pred = Xsig_aug.block(0, 0, n_x, 2*n_aug+1) + a_m + b_m;
 
 
 /*******************************************************************************
