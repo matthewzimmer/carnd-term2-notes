@@ -26,6 +26,9 @@ void UKF::Init() {
 *******************************************************************************/
 
 void UKF::AugmentedSigmaPoints(MatrixXd* Xsig_out) {
+  // classroom video used to implemented this algorithm:
+  //
+  // https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/0949fca6-b379-42af-a919-ee50aa304e6a/lessons/daf3dee8-7117-48e8-a27a-fc4769d2b954/concepts/684424d0-4d25-4aab-8d1c-cf4869fe5f6e
 
   //set state dimension
   int n_x = 5;
@@ -41,6 +44,7 @@ void UKF::AugmentedSigmaPoints(MatrixXd* Xsig_out) {
 
   //define spreading parameter
   double lambda = 3 - n_aug;
+  double sqr_lambda = sqrt(lambda+n_aug);
 
   //set example state
   VectorXd x = VectorXd(n_x);
@@ -72,9 +76,33 @@ void UKF::AugmentedSigmaPoints(MatrixXd* Xsig_out) {
  ******************************************************************************/
 
   //create augmented mean state
+  // add std_a and std_yawdd
+  x_aug.head(5) = x;
+  x_aug(5) = 0;
+  x_aug(6) = 0;
+
+
+
   //create augmented covariance matrix
+  MatrixXd Q = MatrixXd(2, 2);
+  Q << std_a*std_a, 0.0,
+          0.0, std_yawdd*std_yawdd;
+
+  P_aug.fill(0.0);
+  P_aug.topLeftCorner(n_x, n_x) = P;
+  P_aug.bottomRightCorner(n_aug-n_x, n_aug-n_x) = Q;
+
   //create square root matrix
+  //calculate square root of P
+  MatrixXd A = P_aug.llt().matrixL();
+  MatrixXd B = sqr_lambda * A;
+
   //create augmented sigma points
+  Xsig_aug.col(0) = x_aug;
+  for(int i = 1; i <= n_aug; i++) {
+    Xsig_aug.col(i) = x_aug + B.col(i-1);
+    Xsig_aug.col(i+n_aug) = x_aug - B.col(i-1);
+  }
 
 /*******************************************************************************
  * Student part end
