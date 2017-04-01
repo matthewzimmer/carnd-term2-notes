@@ -37,12 +37,26 @@ add_executable(16_Jacobian_Matrix_Part_1
         L5_Lidar_and_Radar_with_Kalman_Filters/16_Jacobian_Matrix_Part_1/main.cpp
         L5_Lidar_and_Radar_with_Kalman_Filters/16_Jacobian_Matrix_Part_1/main.h)
 
-add_executable(20_Evalating_KF_Performance_Part_1 L5_Lidar_and_Radar_with_Kalman_Filters/20_Evalating_KF_Performance_Part_1/main.cpp L5_Lidar_and_Radar_with_Kalman_Filters/20_Evalating_KF_Performance_Part_1/main.h)
+add_executable(20_Evalating_KF_Performance_Part_1
+        L5_Lidar_and_Radar_with_Kalman_Filters/20_Evalating_KF_Performance_Part_1/main.cpp
+        L5_Lidar_and_Radar_with_Kalman_Filters/20_Evalating_KF_Performance_Part_1/main.h)
 
-add_executable(14_Generating_Sigma_Points_Assignment_1 L7_Unscented_Kalman_Filters/14_Generating_Sigma_Points_Assignment_1/main.cpp L7_Unscented_Kalman_Filters/14_Generating_Sigma_Points_Assignment_1/ukf.cpp L7_Unscented_Kalman_Filters/14_Generating_Sigma_Points_Assignment_1/ukf.h)
+add_executable(14_Generating_Sigma_Points_Assignment_1
+        L7_Unscented_Kalman_Filters/14_Generating_Sigma_Points_Assignment_1/main.cpp
+        L7_Unscented_Kalman_Filters/14_Generating_Sigma_Points_Assignment_1/ukf.cpp
+        L7_Unscented_Kalman_Filters/14_Generating_Sigma_Points_Assignment_1/ukf.h)
 
-add_executable(17_Augmentation_Assignment_1 L7_Unscented_Kalman_Filters/17_Augmentation_Assignment_1/main.cpp L7_Unscented_Kalman_Filters/17_Augmentation_Assignment_1/ukf.h L7_Unscented_Kalman_Filters/17_Augmentation_Assignment_1/ukf.cpp)
+add_executable(17_Augmentation_Assignment_1
+        L7_Unscented_Kalman_Filters/17_Augmentation_Assignment_1/main.cpp
+        L7_Unscented_Kalman_Filters/17_Augmentation_Assignment_1/ukf.h
+        L7_Unscented_Kalman_Filters/17_Augmentation_Assignment_1/ukf.cpp)
 
-add_executable(20_Sigma_Point_Prediction_Assignment_1 L7_Unscented_Kalman_Filters/20_Sigma_Point_Prediction_Assignment_1/ukf.cpp L7_Unscented_Kalman_Filters/20_Sigma_Point_Prediction_Assignment_1/ukf.h L7_Unscented_Kalman_Filters/20_Sigma_Point_Prediction_Assignment_1/main.cpp)
+add_executable(20_Sigma_Point_Prediction_Assignment_1
+        L7_Unscented_Kalman_Filters/20_Sigma_Point_Prediction_Assignment_1/ukf.cpp
+        L7_Unscented_Kalman_Filters/20_Sigma_Point_Prediction_Assignment_1/ukf.h
+        L7_Unscented_Kalman_Filters/20_Sigma_Point_Prediction_Assignment_1/main.cpp)
 
-add_executable(23_Predicted_Mean_and_Covariance_Assignment_1 L7_Unscented_Kalman_Filters/23_Predicted_Mean_and_Covariance_Assignment_1/main.cpp L7_Unscented_Kalman_Filters/23_Predicted_Mean_and_Covariance_Assignment_1/ukf.cpp L7_Unscented_Kalman_Filters/23_Predicted_Mean_and_Covariance_Assignment_1/ukf.h)
+add_executable(23_Predicted_Mean_and_Covariance_Assignment_1
+        L7_Unscented_Kalman_Filters/23_Predicted_Mean_and_Covariance_Assignment_1/main.cpp
+        L7_Unscented_Kalman_Filters/23_Predicted_Mean_and_Covariance_Assignment_1/ukf.cpp
+        L7_Unscented_Kalman_Filters/23_Predicted_Mean_and_Covariance_Assignment_1/ukf.h)
