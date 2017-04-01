@@ -6,7 +6,7 @@
 #define TERM2_NOTES_MAIN_H
 
 #include <iostream>
-#include "../../lib/Eigen/Dense"
+#include "Eigen/Dense"
 #include <vector>
 #include <cmath>
 

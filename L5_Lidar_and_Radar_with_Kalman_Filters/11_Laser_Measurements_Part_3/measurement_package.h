@@ -5,7 +5,7 @@
 #ifndef MEASUREMENT_PACKAGE_H_
 #define MEASUREMENT_PACKAGE_H_
 
-#include "../../lib/Eigen/Dense"
+#include "Eigen/Dense"
 
 class MeasurementPackage {
 public:

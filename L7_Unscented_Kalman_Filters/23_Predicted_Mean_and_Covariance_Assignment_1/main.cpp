@@ -7,8 +7,6 @@
 #include <vector>
 #include "ukf.h"
 
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "IncompatibleTypes"
 using namespace std;
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
@@ -29,4 +27,3 @@ int main() {
 
   return 0;
 }
-#pragma clang diagnostic pop

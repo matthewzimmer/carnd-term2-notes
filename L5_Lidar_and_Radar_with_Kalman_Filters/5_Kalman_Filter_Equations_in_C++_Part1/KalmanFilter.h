@@ -5,7 +5,7 @@
 #ifndef TERM2_NOTES_KALMANFILTER_H
 #define TERM2_NOTES_KALMANFILTER_H
 #include <iostream>
-#include "../../lib/Eigen/Dense"
+#include "Eigen/Dense"
 #include <vector>
 
 #pragma clang diagnostic push

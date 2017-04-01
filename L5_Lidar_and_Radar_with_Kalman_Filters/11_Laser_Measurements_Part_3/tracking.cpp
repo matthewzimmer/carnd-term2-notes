@@ -2,7 +2,7 @@
 // Created by Matthew Zimmer on 3/6/17.
 //
 
-#include "../../lib/Eigen/Dense"
+#include "Eigen/Dense"
 #include <iostream>
 #include "tracking.h"
 

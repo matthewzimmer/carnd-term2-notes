@@ -3,6 +3,12 @@ project(term2_notes)
 
 set(CMAKE_CXX_STANDARD 11)
 
+if(NOT IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/lib/Eigen/")
+    execute_process(COMMAND unzip -o ${CMAKE_CURRENT_SOURCE_DIR}/lib/eigen.zip -d ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+endif()
+
+include_directories(include ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+
 set(SOURCE_FILES scratchpad/hello_world.cpp scratchpad/hello_world.h scratchpad/Car.cpp scratchpad/Car.h)
 add_executable(term2_notes ${SOURCE_FILES})
 
@@ -15,6 +21,7 @@ add_executable(KalmanFilter ${kalman_sources})
 
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/obj_pose-laser-radar-synthetic-input.txt
         DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
 
 add_executable(11_Laser_Measurements_Part_3
         L5_Lidar_and_Radar_with_Kalman_Filters/11_Laser_Measurements_Part_3/main.cpp

@@ -8,7 +8,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
-#include "../../lib/Eigen/Dense"
+#include "Eigen/Dense"
 #include "measurement_package.h"
 #include "ground_truth_package.h"
 #include "tracking.h"
