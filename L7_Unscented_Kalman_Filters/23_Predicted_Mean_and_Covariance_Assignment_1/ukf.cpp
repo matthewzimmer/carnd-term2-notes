@@ -60,8 +60,51 @@ void UKF::PredictMeanAndCovariance(VectorXd* x_out, MatrixXd* P_out) {
  ******************************************************************************/
 
   //set weights
+  double w_i = 1/(2*(lambda+n_aug));
+
+  size_t N = 2*n_aug+1;
+  for(int i = 0; i < N; i++) {
+    if(i==0) {
+      weights(i) = lambda/(lambda+n_aug);
+    } else {
+      weights(i) = w_i;
+    }
+  }
+
   //predict state mean
+  for(int i = 0; i < N; i++) {
+    x = x + weights(i)*Xsig_pred.col(i);
+  }
+
   //predict state covariance matrix
+  VectorXd x_diff;
+  size_t N_P = n_x;
+  for(int i = 0; i < N; i++) {
+    x_diff = Xsig_pred.col(i)-x;
+    //angle normalization
+    /**
+     * When calculating the predicted state covariance matrix,
+     * in the equation we always need the difference between
+     * the mean predicted state and a sigma points. The problem
+     * here is that the state contains an angle. As you have
+     * learned before, subtracting angles is a problem for Kalman
+     * filters, because the result might be 2π plus a small angle,
+     * instead of just a small angle. That’s why I normalize
+     * the angle here.
+     *
+     * LIFE LESSON:
+     *
+     * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     *
+     *          Make sure you always normalize when you calculate the difference between angles
+     *
+     * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     */
+    while (x_diff(3)> M_PI) x_diff(3)-=2.*M_PI;
+    while (x_diff(3)<-M_PI) x_diff(3)+=2.*M_PI;
+
+    P = P + weights(i) * x_diff * x_diff.transpose();
+  }
 
 
 /*******************************************************************************
