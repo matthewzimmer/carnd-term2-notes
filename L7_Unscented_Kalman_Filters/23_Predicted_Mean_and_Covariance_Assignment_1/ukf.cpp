@@ -71,6 +71,10 @@ void UKF::PredictMeanAndCovariance(VectorXd* x_out, MatrixXd* P_out) {
     }
   }
 
+  double w_sum;
+  std::cout << "weights sum = " << weights.sum() << std::endl;
+
+
   //predict state mean
   for(int i = 0; i < N; i++) {
     x = x + weights(i)*Xsig_pred.col(i);
@@ -91,6 +95,8 @@ void UKF::PredictMeanAndCovariance(VectorXd* x_out, MatrixXd* P_out) {
      * filters, because the result might be 2π plus a small angle,
      * instead of just a small angle. That’s why I normalize
      * the angle here.
+     *
+     *
      *
      * LIFE LESSON:
      *
